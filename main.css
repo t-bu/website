@@ -33,20 +33,21 @@ li a:hover {
     
 }
 
-h1 {
-  margin-left: 16px;
+h1, h2, h3, p {
+  margin-left: 32px;
   font-family: "Courier New", Courier, monospace;
   color: gray;
 }
 
+
 .slideshow {
-  max-width: 1000px;
   position: relative;
   margin: auto;
-}
+} 
 
 .slide {
   display: none;
+  z-index: 1; 
 }
 
 .dot {
@@ -57,6 +58,7 @@ h1 {
   border-radius: 50%;
   display: inline-block;
   transition: 0.6s ease;
+  z-index: 1;
 }
 
 .active, .dot:hover {
