@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <title>Tiffany Bui</title>
+  </head>
+
+  <body>
+    <header>
+      
+      <ul>
+        <li><a href="">Meet Tiffany</a></li>
+        <li><a href="">Contact Information</a></li>
+      </ul>
+      
+    </header>
+
+    
+    <div class="slideshow">
+
+    <!-- Below are placeholder images -->
+
+      <div class="slide fade"> 
+        <img src="images/peach.jpeg" style="width:100%">
+      </div>
+
+      <div class="slide fade"> 
+        <img src="images/orange.jpeg" style="width:100%">
+      </div>
+
+      <div class="slide fade"> 
+        <img src="images/strawberry.jpeg" style="width:100%">
+      </div> 
+    
+      <div style="text-align:center">
+	<span class="dot" onclick="display(0)"></span> 
+	<span class="dot" onclick="display(1)"></span> 
+	<span class="dot" onclick="display(2)"></span> 
+      </div>
+
+    </div>
+
+
+  </body>
+
+  <script>
+
+    //Upon inital load, first image is displayed
+    var index = 0;
+    display(index);
+
+    function display(n) {
+
+      var slides = document.getElementsByClassName('slide');
+      var i;
+      for (i = 0; i < slides.length; i++) {
+        //makes sure other slides remain unseen - 'resets' display
+	slides[i].style.display = "none"; 
+      }
+
+      var index = n;
+      slides[index].style.display = "block"; 
+
+      var dots = document.getElementsByClassName('dot');
+      for (i = 0; i < dots.length; i++) {
+	//active dot class 
+	dots[i].className = dots[i].className.replace(" active", "");
+      }
+      dots[index].className += " active";
+   }
+
+  </script>
+
+</html>
+
